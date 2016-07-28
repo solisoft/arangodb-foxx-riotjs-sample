@@ -20,16 +20,17 @@
         <div class="uk-margin-top uk-text-center">
           <h2>Foxx - RiotJS</h2>
           <h3>Authentication</h3>
-          <p>Please use demo@demo.com as login and demo as password</p>
+          <p>
+          Please use demo@demo.com as login <br>and demo as password</p>
         </div>
         <form class="uk-form uk-margin-top"  onsubmit="{ save_form }">
            <label for="" class="uk-form-label">Email</label>
            <div class="uk-form-controls">
-             <input type="text" placeholder="john@doe.com" class="uk-width-1-1" id="username" name="username" value="">
+             <input type="text" placeholder="john@doe.com" class="uk-width-1-1" id="username" name="username" value="demo@demo.com">
            </div>
            <label for="" class="uk-form-label">Password</label>
            <div class="uk-form-controls">
-             <input type="password" placeholder="********" class="uk-width-1-1" id="password" name="password" value="">
+             <input type="password" placeholder="********" class="uk-width-1-1" id="password" name="password" value="demo">
            </div>
            <div class="uk-form-controls uk-margin-top">
              <button type="submit" class="uk-width-1-1 uk-button">Connection</button>
