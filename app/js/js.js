@@ -20,7 +20,7 @@ $(function() {
 
   riot.route(function(collection, id, action) {
     if(action != undefined) {
-      if(collection == "user") {
+      if(collection == "users") {
         if(action == "edit") {
           riot.mount('div#app', 'user_edit', { user_id: id })  
         }
@@ -29,9 +29,8 @@ $(function() {
   })
 
   riot.route(function(collection, action) {
-    if(action != undefined) {
-       
-      if(collection == "user") {
+    if(action != undefined) {       
+      if(collection == "users") {
         if(action == "new") {
           riot.mount('div#app', 'user_new')  
         }

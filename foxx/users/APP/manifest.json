@@ -1,7 +1,7 @@
 {
-    "name": "contracts",
-    "version": "0.0.1",
-    "description": "contracts",
+    "name": "demousers",
+    "version": "0.0.2",
+    "description": "demousers",
     "engines": {
         "arangodb": "^3.0.0"
     },

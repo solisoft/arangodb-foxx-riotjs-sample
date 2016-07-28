@@ -1,6 +1,6 @@
 <loading>
   <div class="uk-text-center">
-    Chargement de l'application ...
+    Loading app ...
     <i class="uk-icon-spinner uk-icon-spin"></i>
   </div>
 
@@ -18,20 +18,21 @@
       <div class="uk-width-3-10"></div>
       <div class="uk-width-4-10">
         <div class="uk-margin-top uk-text-center">
-          <h2>CRM - DSN</h2>
-          <h3>Authentification</h3>
+          <h2>Foxx - RiotJS</h2>
+          <h3>Authentication</h3>
+          <p>Please use demo@demo.com as login and demo as password</p>
         </div>
         <form class="uk-form uk-margin-top"  onsubmit="{ save_form }">
            <label for="" class="uk-form-label">Email</label>
            <div class="uk-form-controls">
              <input type="text" placeholder="john@doe.com" class="uk-width-1-1" id="username" name="username" value="">
            </div>
-           <label for="" class="uk-form-label">Mot de passe</label>
+           <label for="" class="uk-form-label">Password</label>
            <div class="uk-form-controls">
              <input type="password" placeholder="********" class="uk-width-1-1" id="password" name="password" value="">
            </div>
            <div class="uk-form-controls uk-margin-top">
-             <button type="submit" class="uk-width-1-1 uk-button">Connexion</button>
+             <button type="submit" class="uk-width-1-1 uk-button">Connection</button>
            </div>
            
         </form>
@@ -43,7 +44,7 @@
   <script>
     save_form(e) {
       $.post(url + "users/login", JSON.stringify({ "username": $("#username").val(), "password": $("#password").val() }) , function(data) {
-        if(data.success) riot.route('/salaries')
+        if(data.success) riot.route('/users')
       })
     }
   </script>
