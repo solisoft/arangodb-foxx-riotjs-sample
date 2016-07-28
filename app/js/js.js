@@ -4,6 +4,7 @@ $(function() {
     riot.mount('div#app', 'login')
   })
   riot.route('/logout', function(name) {
+    console.log(url+"users/logout")
     $.post(url +"users/logout", function(d) {
       riot.route('/')  
     })

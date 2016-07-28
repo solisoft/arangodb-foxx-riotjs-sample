@@ -35,6 +35,12 @@
 </demouser_new>
 
 <demousers>
+  <div class="uk-float-right">
+    <a href="/#logout">
+      <i class="uk-icon-sign-out"></i>
+      Logout
+    </a>
+  </div>
   <h3>Users' List</h3>
   <p class="uk-alert uk-alert-warning">This is just a demo about using ArangoDB / Foxx within RiotJS - Nothing more - Just a CRUD sample</p>
   <a href="/#demousers/new" class="uk-button uk-button-mini"><i class="uk-icon-plus"></i> New User</a>
