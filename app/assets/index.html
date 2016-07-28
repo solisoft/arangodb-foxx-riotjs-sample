@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ArangoDB FOXX RiotJS Experiment</title>
+    <link rel="stylesheet" href="DIGEST(css/vendors.css)">
+    <link rel="stylesheet" href="DIGEST(css/css.css)">
+  </head>
+  <body>
+    <div class="uk-container-center uk-container uk-margin-top">
+      <div class="uk-grid">
+        <div class="uk-width-1-5">
+          <div class="uk-panel uk-panel-box">
+            <h3 class="uk-panel-title">ArangoDB FOXX RiotJS Experiment</h3>
+            <ul class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="">
+              <li class=""><a href="/#salaries">Users</a></li>
+              <li class=""><a href="/#logout">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="uk-width-4-5">
+          <div id="app"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="DIGEST(js/vendors.js)"></script>
+    <script src="DIGEST(js/js.js)"></script>
+    <script>
+      var url = "/_db/demo/"; // We are using the demo database
+      var $ = require("vendors/jquery.js");
+      var jQuery = $;
+      var riot = require("vendors/riot.min.js");
+      var _ = require("vendors/underscore.min.js");
+      var UIKit = require("vendors/uikit.js");
+      require("vendors/form-select.js");
+      require("vendors/datepicker.js");
+      require("vendors/modal.js");
+      
+      var common = require("js/common.js");
+      common.init();
+
+      require("widgets/login.html.tag");
+      require("widgets/users.html.tag");
+
+      // Start the app
+      require("js/js.js");
+    </script>
+  </body>
+
+</html>
