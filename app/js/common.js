@@ -78,7 +78,7 @@ var Common = {
 
   saveForm: function saveForm(formID, path, objID) {
     objID = objID||""
-    console.log(formID)
+    
     var json = JSON.stringify($("#"+ formID).serializeObject())
     $("div[data-hint]").html("")
     $.get(url + path + "/check_form?data=" + json, function(d) {
@@ -92,8 +92,12 @@ var Common = {
           $("div[data-hint="+e.path+"]").html("<div>"+e.message+"</div>")
         })
       } else {
+
         $.post(url + path + "/" + objID, json, function(d) {
-          riot.route("/#"+ path +"/" + d.key._key)
+          if(objID == "") {
+            objID = d.key._key
+            riot.route("/"+ path +"/" + objID + "/edit")
+          }
         })
       }
       setTimeout(function() {

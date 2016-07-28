@@ -7,7 +7,7 @@
   <script>
     $.get(url + "users/whoami", function(d) {
       if(d.username === null) riot.route('/login'); 
-      else riot.route('/salaries'); 
+      else riot.route('/demousers'); 
     })
   </script>
 </loading>
@@ -45,7 +45,7 @@
   <script>
     save_form(e) {
       $.post(url + "users/login", JSON.stringify({ "username": $("#username").val(), "password": $("#password").val() }) , function(data) {
-        if(data.success) riot.route('/users')
+        if(data.success) riot.route('/demousers')
       })
     }
   </script>

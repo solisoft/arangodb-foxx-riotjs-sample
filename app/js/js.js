@@ -9,8 +9,8 @@ $(function() {
     })
   })
 
-  riot.route('/users', function(name) {
-    riot.mount('div#app', 'users')
+  riot.route('/demousers', function(name) {
+    riot.mount('div#app', 'demousers')
   })
 
   riot.route('/', function(name) {
@@ -20,9 +20,9 @@ $(function() {
 
   riot.route(function(collection, id, action) {
     if(action != undefined) {
-      if(collection == "users") {
+      if(collection == "demousers") {
         if(action == "edit") {
-          riot.mount('div#app', 'user_edit', { user_id: id })  
+          riot.mount('div#app', 'demouser_edit', { user_id: id })  
         }
       }  
     }
@@ -30,9 +30,9 @@ $(function() {
 
   riot.route(function(collection, action) {
     if(action != undefined) {       
-      if(collection == "users") {
+      if(collection == "demousers") {
         if(action == "new") {
-          riot.mount('div#app', 'user_new')  
+          riot.mount('div#app', 'demouser_new')  
         }
       }  
     }

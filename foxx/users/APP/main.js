@@ -27,7 +27,7 @@ var loadFields = function() {
     { r: true,  c:"uk-width-1-1", n:"login", t:"string", j: joi.string().email().required(), l:"Email" },
     { r: true,  c:"uk-width-1-2", n:"fn", t:"string", j: joi.string().min(2).max(60).required(), l:"First Name" },
     { r: false, c:"uk-width-1-2", n:"ln", t:"string", j: joi.string().min(2).max(60).required(), l:"Last Name" },
-    { r: true,  c:"uk-width-1-2", n:"birthday", t:"date", j: joi.date().format("DD/MM/YYYY").raw().required(), l:"Birthday" },
+    { r: true,  c:"uk-width-1-2", n:"birthday", t:"date", j: joi.date().format("DD-MM-YYYY").raw().required(), l:"Birthday" },
     { r: false,  c:"uk-width-1-2", n:"role", t:"list", j: joi.string().required(), l:"Role", d: [["admin","Administrator"], ["user","User"]] },
     { r: true,  c:"uk-width-1-1", n:"infos", t:"text", j: joi.string().empty("").default(""), l:"Informations (optional)" }
   ]
