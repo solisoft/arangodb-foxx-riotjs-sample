@@ -79,15 +79,6 @@ router.get('/fields', function (req, res) {
 })
 .description('Get all fields to build form');
 
-router.post('/search', function (req, res) {
-  if(!req.session.uid) res.throw('unauthorized')
-  res.send({data: db._query("FOR doc IN @@collection RETURN doc", {"@collection": collName })._documents });
-})
-.body(joi.object({
-  term: joi.string().required()
-}).required(), 'Search term')
-.description('Filter salaries');
-
 router.post('/', function (req, res) {
   if(!req.session.uid) res.throw('unauthorized')
   var data = {}
@@ -97,22 +88,22 @@ router.post('/', function (req, res) {
   
 })
 .body(joi.object(schema), 'data')
-.description('Create a new salarie.');
+.description('Create a new object.');
 
 router.post('/:id', function (req, res) {
   if(!req.session.uid) res.throw('unauthorized')
-  var salarie = collection.document(req.pathParams.id)
+  var obj = collection.document(req.pathParams.id)
   var data = {}
   each(fields, function(f) {data[f.n] = req.body[f.n]})
-  collection.update(salarie, data)
+  collection.update(obj, data)
   res.send({ success: true });
 })
 .body(joi.object(schema), 'data')
-.description('Update a salarie.');
+.description('Update object.');
 
 router.delete('/:id', function (req, res) {
   if(!req.session.uid) res.throw('unauthorized')
-  collection.remove("salaries/"+req.pathParams.id)
+  collection.remove(collName + "/" + req.pathParams.id)
   res.send({success: true });
 })
-.description('delete a salarie.');
+.description('delete a object.');
