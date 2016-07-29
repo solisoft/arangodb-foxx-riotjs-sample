@@ -38,5 +38,10 @@ You need Nginx installed locally and point demo.dev to localhost using /etc/host
 * run `brunch watch`
 * open you folder to http://demo.dev:8080
 
+## Deploy
+
+To create the `dist` folder run `brunch build --production` 
+It will compact/uglify JS/CSS & HTML code
+
 
 Enjoy.
