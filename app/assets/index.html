@@ -22,6 +22,7 @@
       var url = "/_db/demo/"; // We are using the demo database
       var $ = require("vendors/jquery.js");
       var jQuery = $;
+      $.ajaxSetup({'cache':false});
       var riot = require("vendors/riot.min.js");
       var _ = require("vendors/underscore.min.js");
       var UIKit = require("vendors/uikit.js");
