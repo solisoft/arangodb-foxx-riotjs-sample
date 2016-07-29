@@ -36,7 +36,7 @@ You need Nginx installed locally and point demo.dev to localhost using /etc/host
 * Fork/Clone the code
 * run `npm install`
 * run `brunch watch`
-* open you folder to 
+* open you folder to http://demo.dev:8080
 
 
 Enjoy.
