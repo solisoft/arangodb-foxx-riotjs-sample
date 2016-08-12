@@ -5,6 +5,7 @@
     <title>ArangoDB FOXX RiotJS Experiment</title>
     <link rel="stylesheet" href="DIGEST(css/vendors.css)">
     <link rel="stylesheet" href="DIGEST(css/css.css)">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
   </head>
   <body>
     <div class="uk-container-center uk-container uk-margin-top">
@@ -20,15 +21,6 @@
     <script src="DIGEST(js/js.js)"></script>
     <script>
       var url = "/_db/demo/"; // We are using the demo database
-      var $ = require("vendors/jquery.js");
-      var jQuery = $;
-      $.ajaxSetup({'cache':false});
-      var riot = require("vendors/riot.min.js");
-      var _ = require("vendors/underscore.min.js");
-      var UIKit = require("vendors/uikit.js");
-      require("vendors/form-select.js");
-      require("vendors/datepicker.js");
-      require("vendors/modal.js");
       
       var common = require("js/common.js");
       common.init();
@@ -39,6 +31,7 @@
       // Start the app
       require("js/js.js");
     </script>
+
   </body>
 
 </html>

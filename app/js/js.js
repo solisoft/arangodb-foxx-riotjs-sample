@@ -1,5 +1,11 @@
-$(function() {
+require("select2")
 
+require("uikit/dist/js/components/form-select")
+require("uikit/dist/js/components/datepicker")
+
+$(function() {
+  $.ajaxSetup({'cache':false});
+      
   riot.route('/login', function(name) {
     riot.mount('div#app', 'login')
   })

@@ -11,15 +11,21 @@
   "license": "MIT",
   "homepage": "https://github.com/solisoft/arangodb-foxx-riotjs-sample",
   "dependencies": {
+    "auto-reload-brunch": "^2.7.1",
     "brunch": "^2.8.2",
     "clean-css-brunch": "^2.0.0",
     "css-brunch": "^2.6.1",
     "digest-brunch": "^1.5.1",
     "html-pages-brunch": "^2.3.1",
     "javascript-brunch": "^2.0.0",
+    "jquery": "^3.1.0",
+    "riot": "^2.5.0",
     "riot-brunch": "0.0.4",
     "sass-brunch": "^2.6.3",
+    "select2": "^4.0.3",
     "uglify-js": "^2.7.0",
-    "uglify-js-brunch": "^2.0.1"
+    "uglify-js-brunch": "^2.0.1",
+    "uikit": "^2.26.4",
+    "underscore": "^1.8.3"
   }
 }

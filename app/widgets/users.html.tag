@@ -3,7 +3,6 @@
   <form onsubmit="{ save_form }" class="uk-form" id="form_users">
   </form>
   <script>
-    
     save_form(e) {
       common.checkLogin()
       common.saveForm("form_users", "demousers", opts.user_id)
@@ -14,6 +13,7 @@
     $.get(url + "demousers/" + opts.user_id, function(d) {
       _this.users = d.data      
       common.buildForm(_this.users, d.fields, '#form_users', 'demousers')
+      $("select").select2()
     })
   </script>
 </demouser_edit>
@@ -26,11 +26,21 @@
     save_form(e) {
       common.checkLogin()
       common.saveForm("form_new_users", "demousers")
+
     }
 
-    $.get(url + "demousers/fields", function(d) {
-      common.buildForm({}, d.fields, '#form_new_users', 'demousers')
+    $.get(url + "login/whoami", function(d) {
+      if(d.username === null) riot.route('/login');
+      else {
+        $.get(url + "demousers/fields", function(d) {
+          common.buildForm({}, d.fields, '#form_new_users', 'demousers')
+          $("select").select2()
+        })
+
+      }
     })
+  
+    
   </script>
 </demouser_new>
 
@@ -85,7 +95,7 @@
       });
     }
 
-    $.get(url + "users/whoami", function(d) {
+    $.get(url + "login/whoami", function(d) {
       if(d.username === null) riot.route('/login');
     })
 

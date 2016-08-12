@@ -65,13 +65,14 @@ var Common = {
     riot.update()
   },
   checkLogin: function checkLogin() {
-    $.get(url + "users/whoami", function(d) {
+    $.get(url + "login/whoami", function(d) {
+      console.log(d)
       if(d.username === null) riot.route('/login');
     })
   },
 
   checkUser: function checkUser() {
-    $.get(url + "users/whoami", function(d) {
+    $.get(url + "login/whoami", function(d) {
       if(d.username === null) riot.route('/login');  
     })
   },
